@@ -1,0 +1,20 @@
+const int currentPin = A0;
+const int relayPin = 7;
+const int currentThreshold = 512; // Adjust as needed
+
+void setup() {
+  pinMode(relayPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int currentValue = analogRead(currentPin);
+  Serial.println(currentValue);
+  if (currentValue > currentThreshold) {
+    digitalWrite(relayPin, LOW); // Relay OFF
+    Serial.println("Fault Detected! Relay Opened.");
+  } else {
+    digitalWrite(relayPin, HIGH); // Relay ON
+  }
+  delay(1000);
+}

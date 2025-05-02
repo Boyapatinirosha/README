@@ -1,0 +1,17 @@
+# Substation Fault Detection & Auto Isolation
+
+This project detects faults in substations and isolates them automatically using Arduino.
+
+## Features
+- Real-time monitoring
+- Auto isolation using relay
+- Serial output for debugging
+
+## Components
+- Arduino Uno
+- ACS712 Current Sensor
+- Relay Module
+- LCD (optional)
+
+## Circuit Diagram
+![circuit](docs/circuit_diagram.png)
